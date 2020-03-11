@@ -1,17 +1,21 @@
-# BCBScan APIs
+# BCBScan API
 
 
 ## 概览
+
 BCBScan
 
+## 版本信息
 
-### 版本信息
 *版本* : 1.0
-#### 获取地址信息
+
+## API
+
+#### 地址详情
+
 ```
 GET /bcbscan/address/info/{address}
 ```
-
 
 ##### 请求参数
 
@@ -38,13 +42,11 @@ GET /bcbscan/address/info/{address}
 | └─symbol        | string | 代币符号     |
 | └─name          | string | 代币名称     |
 
-
 ##### HTTP请求示例
 
 ```
-/bcbscan/address/info/bcbFG9SVLBcoeUNQD2cgEzm2PnRVhFe7FVCJ
+https://spring.bcbscan.io/bcbscan/address/info/bcbFG9SVLBcoeUNQD2cgEzm2PnRVhFe7FVCJ
 ```
-
 
 ##### HTTP响应示例
 
@@ -154,7 +156,6 @@ GET /bcbscan/address/info/{address}
 }
 ```
 
-
 #### 区块详情
 ```
 GET /bcbscan/block/{blockHeightOrHash}
@@ -190,15 +191,11 @@ GET /bcbscan/block/{blockHeightOrHash}
 | └─lastMining      | double | 挖矿奖励               |
 | └─coinCode        | string | 币种                   |
 
-
-
-
 ##### HTTP请求示例
 
 ```
-/bcbscan/block/30257971
+https://spring.bcbscan.io/bcbscan/block/30257971
 ```
-
 
 ##### HTTP响应示例
 
@@ -258,12 +255,10 @@ GET /bcbscan/block/{blockHeightOrHash}
 }
 ```
 
-
 #### 交易详情
 ```
 GET /bcbscan/tx/{txHash}
 ```
-
 
 ##### 请求参数
 
@@ -305,10 +300,13 @@ GET /bcbscan/tx/{txHash}
 | └─gasUsed      | string |            燃料消耗            |
 
 ##### HTTP请求示例
+
 ```
-/bcbscan/tx/0xe4da08829b1c0ee3ec57f76b82dff920595012c2195c48a176feef09559b86f9
+https://spring.bcbscan.io/bcbscan/tx/0xe4da08829b1c0ee3ec57f76b82dff920595012c2195c48a176feef09559b86f9
 ```
+
 ##### HTTP响应示例
+
 ```
 {
 	"status": "ok",
